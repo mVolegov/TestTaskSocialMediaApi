@@ -26,7 +26,6 @@ public class PostEntity {
     @ManyToOne(fetch = FetchType.EAGER)
     private UserEntity author;
 
-    //TODO check it
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<ImageEntity> images = new ArrayList<>();
 

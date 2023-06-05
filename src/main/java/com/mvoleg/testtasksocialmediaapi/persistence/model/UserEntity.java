@@ -41,7 +41,6 @@ public class UserEntity {
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
-    //TODO check it
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<PostEntity> posts = new ArrayList<>();
 
